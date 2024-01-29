@@ -1,0 +1,20 @@
+{
+  "name": "leetcode-ts-demo",
+  "version": "1.0.0",
+  "repository": "git@github.com:kpkonghk01/leetcode-ts-demo.git",
+  "author": "Pan <kpkong@hk01.com>",
+  "license": "MIT",
+  "packageManager": "yarn@4.0.2",
+  "scripts": {
+    "test": "jest",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.10",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
