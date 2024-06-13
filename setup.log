@@ -1,6 +1,6 @@
 # corepacke enable
 yarn init -y
-yarn set version berry 
+yarn set version berry
 yarn config set nodeLinker node-modules
 yarn add -D typescript tsx jest ts-jest @types/node @types/jest
 yarn ts-jest config:init
