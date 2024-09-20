@@ -1,21 +1,27 @@
 function shortestPalindrome(s: string): string {
   if (s.length < 2) return s;
 
-  const reversed = s.split("").reverse().join("");
-  const table = buildKMPTable(s);
+  const reversed = s + "#" + s.split("").reverse().join("");
+  const table = buildKMPTable(reversed);
 
-  let i = 0;
-  let j = 0;
+  // let i = 0;
+  // let j = 0;
 
-  for (; j < s.length && i < reversed.length; j++) {
-    if (reversed[i] !== s[j]) {
-      j = table[j - 1]! ?? -1;
-    }
+  // for (; j < s.length && i < reversed.length; j++) {
+  //   if (reversed[i] !== s[j]) {
+  //     j = table[j - 1]! ?? -1;
+  //   }
 
-    i++;
-  }
+  //   i++;
+  // }
 
-  return s.slice(j, s.length).split("").reverse().join("") + s;
+  return (
+    s
+      .slice(table[table.length - 1], s.length)
+      .split("")
+      .reverse()
+      .join("") + s
+  );
 }
 
 function buildKMPTable(s: string): number[] {
