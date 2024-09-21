@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/shortest-palindrome/description/
+// https://leetcode.com/submissions/detail/1396911821/
+
 function shortestPalindrome(s: string): string {
   if (s.length < 2) return s;
 
